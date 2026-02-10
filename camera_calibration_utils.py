@@ -2,6 +2,12 @@ import numpy as np
 import cv2
 import img_utils.img_utils as iu
 
+def load_extrinsics_file(path):
+    extrinsics = np.loadtxt(path)
+    r_mat = extrinsics[:3, :]
+    t_vec = extrinsics[3, :].reshape(3,1)
+    return r_mat, t_vec
+
 def xc_to_xw(xc:np.ndarray, R:np.ndarray, t:np.ndarray):
     return R.T @ ( xc - t )
 
