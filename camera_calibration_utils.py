@@ -14,7 +14,7 @@ def xc_to_xw(xc:np.ndarray, R:np.ndarray, t:np.ndarray):
     return R.T @ ( xc - t )
 
 def xw_to_xc(xw:np.ndarray, R:np.ndarray, t:np.ndarray):
-    xc = xc.reshape(3,1)
+    xw = xw.reshape(3,1)
     t = t.reshape(3,1)
     return R @ xw + t
 
