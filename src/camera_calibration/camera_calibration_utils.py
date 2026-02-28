@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
-from ..submodule import img_utils as iu
+
+import img_utils as iu
 
 def load_extrinsics_file(path):
     extrinsics = np.loadtxt(path)

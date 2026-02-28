@@ -1,10 +1,9 @@
-import sys
 import numpy as np
 import cv2
 from pathlib import Path
 import click
-import img_utils.img_utils as iu
-from camera_calibration_utils import xc_to_xw, solve_pnp
+import img_utils as iu
+from camera_calibration.camera_calibration_utils import solve_pnp
 
 @click.command
 @click.option('-wp', 'world_points_path', required=True, type=str, help='対応点の世界座標系のパス')

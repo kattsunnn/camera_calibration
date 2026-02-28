@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from camera_calibration_utils import xc_to_xw
+
+from camera_calibration.camera_calibration_utils import xc_to_xw
 
 def draw_tennis_court(ax, color="white", lw=1.5):
     # テニスコートの寸法 (m)
